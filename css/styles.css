@@ -1,0 +1,152 @@
+/* Reset some default styles */
+body,
+h1,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Mobile Styles */
+header {
+  height: 100vh;
+  background-color: white;
+}
+
+.header-content {
+  background-image: url("/images/satellite.png");
+  background-size: cover;
+  background-position: top;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  gap: 30px;
+}
+
+.eyebrow {
+  color: gray;
+  letter-spacing: 2px;
+}
+
+.title {
+  color: white;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+.text {
+  display: none;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: none;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  max-height: 45px;
+  box-shadow: 10px 10px 15px #c441c4, -10px -10px 15px #71d3f3;
+}
+
+.meteor-button {
+  display: none;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  header {
+    padding: 40px;
+  }
+
+  .header-content {
+    background-position: center;
+    height: 30vh;
+    padding: 40px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 30px 10px #aba0f1;
+  }
+
+  .eyebrow {
+    font-size: 20px;
+  }
+
+  .title {
+    font-weight: 600;
+    letter-spacing: 5px;
+    font-size: 60px;
+  }
+
+  .text {
+    display: block;
+    max-width: 60%;
+    color: #6d6085;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .button {
+    border: none;
+    outline: none;
+    background: none;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  header {
+    padding: 30px;
+  }
+
+  .header-content {
+    height: 40vh;
+  }
+
+
+  .text {
+    max-width: 40%;
+  }
+
+  .button-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .meteor-button {
+    position: relative;
+    display: flex;
+    width: 35px;
+    height: 60px;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 40px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .head {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: white;
+    animation: head 3s ease-out infinite;
+  }
+
+  .tail {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-image: linear-gradient(transparent, white);
+    animation: tail 3s ease-in infinite;
+  }
+}
